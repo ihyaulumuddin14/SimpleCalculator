@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cycle" />
+</head>
+<body>
+    <div class="calculator-container">
+
+        <div class="upper">
+            <h1>Canon</h1>
+            <div class="solar-panel">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="calculator-screen">
+            <input type="text" id="oprScreen" value="" disabled>
+            <input type="text" id="calcScreen" value="0" disabled>
+        </div>
+
+        <div class="description">
+            <p>LS-88Hi Ⅲ</p>
+            <p>SOLAR AND BATTERY <i class='bx bxs-sun' ></i> <i class='bx bx-star'></i></p>
+        </div>
+
+        <div class="calculator-keys">
+            <button class="all-clear on-clear" id="super-btn-clear">ON <br> <hr> C</button>
+            <button class="on-clear">Cl</button>
+            <button class="memory" value="RM" id="super-btn-memory">RM <br> <hr> CM</button>
+            <button class="memory" value="M+">M+</button>
+            <button class="memory" value="M-">M-</button>
+            <button class="number" value="7">7</button>
+            <button class="number" value="8">8</button>
+            <button class="number" value="9">9</button>
+            <button class="operator basic" value="%">%</button>
+            <button class="operator basic" value="√">&radic;</button>
+            <button class="number" value="4">4</button>
+            <button class="number" value="5">5</button>
+            <button class="number" value="6">6</button>
+            <button class="operator basic" value="×">&times;</button>
+            <button class="operator basic" value="/">&divide;</button>
+            <button class="number" value="1">1</button>
+            <button class="number" value="2">2</button>
+            <button class="number" value="3">3</button>
+            <button class="operator basic" value="+">+</button>
+            <button class="operator basic" value="-">-</button>
+            <button class="number" value="0">0</button>
+            <button class="decimal" value=".">.</button>
+            <button class="operator" value="±">±↺</button>
+            <button class="equal-sign basic" value="=">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
