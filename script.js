@@ -141,10 +141,19 @@ function recallMemory(value) {
     }
 }
 
+function someClear() {
+    calculator.displayValue = '0'
+    updateDisplay()
+}
+
+
 document.querySelector('.calculator-keys').addEventListener('click', (event) => {
     const {target} = event
 
     if (!target.matches('button')) {
+        return
+    } else if (target.classList.contains('some-clear')) {
+        someClear()
         return
     } else if (target.classList.contains('memory')) {
         recallMemory(target.value)
