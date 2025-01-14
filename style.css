@@ -75,12 +75,11 @@ body {
 }
 
 #calcScreen {
-    padding: 0;
     font-family: 'Digital-7', sans-serif;
     height: 100%;
     width: 90%;
     border-radius: 0 5px 5px 0;
-    font-size: 3em;
+    font-size: 2em;
     text-align: right;
     border-left: none;
 }
