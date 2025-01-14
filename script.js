@@ -17,11 +17,13 @@ function updateDisplay() {
 function inputDigit(digit) {
     const {displayValue, waitingForSecondOperand} = calculator
 
-    if (waitingForSecondOperand === true) {
-        calculator.displayValue = digit
-        calculator.waitingForSecondOperand = false
-    } else {
-        calculator.displayValue = (displayValue === '0') ? digit : displayValue + digit
+    if (displayValue.length < 10) {
+        if (waitingForSecondOperand === true) {
+            calculator.displayValue = digit
+            calculator.waitingForSecondOperand = false
+        } else {
+            calculator.displayValue = (displayValue === '0') ? digit : displayValue + digit
+        }
     }
 
     updateDisplay()
@@ -36,6 +38,8 @@ function inputDecimal(dot) {
 }
 
 function handleOperator(nextOperator) {
+    calculator.displayValue = calculator.displayValue.slice(0, 9)
+
     const {firstOperand, displayValue, operator} = calculator
     let inputValue = parseFloat(displayValue)
 
@@ -72,6 +76,7 @@ function handleOperator(nextOperator) {
     
     calculator.waitingForSecondOperand = true
     updateDisplay()
+    console.log(calculator.displayValue)
 }
 
 function calculate(firstOperand, secondOperand = null, operator) {
@@ -94,6 +99,8 @@ function resetCalculator() {
 }
 
 function handleEqual() {
+    calculator.displayValue = calculator.displayValue.slice(0, 9)
+
     const {firstOperand, displayValue, operator} = calculator
     const inputValue = parseFloat(displayValue)
 
